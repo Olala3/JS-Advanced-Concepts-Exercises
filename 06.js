@@ -8,5 +8,4 @@ function printName() {
     return inner
 }
 
-let inner = printName();
-console.log(inner());
+console.log(printName()());
