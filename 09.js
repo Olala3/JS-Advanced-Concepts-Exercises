@@ -3,7 +3,10 @@ const person = {
     lastName: 'Rossi',
     age: 25
   }
-  
-console.log(person.firstName);
-console.log(person.lastName);
-console.log(person.age);
+
+//1
+const result = Object.keys(person).map(key => `${key}: ${person[key]}`)
+console.log(result);
+
+//2
+console.log(Object.entries(person))
