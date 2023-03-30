@@ -31,9 +31,16 @@ class Square {
   
   class AreaCalculator {
     static calculate(a) {
+      if (a instanceof Square) {
         return a.area;
+      } else if (a instanceof Rectangle) {
+        return a.area;
+      } else if (a instanceof Circle) {
+        return a.area;
+      } else {
+        console.log("Invalid shape!")
+      }
     }
-
   }
   
   const square = new Square(4);
