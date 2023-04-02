@@ -1,14 +1,14 @@
 function repeatHello(callback) {
-    let cb = setInterval(callback, 1000);
+    setInterval(() => {
+      callback();
+    }, 1000);
+  }
+  
+  const printHello = () => {
+    console.log("Hello");
+  }
+  
+  repeatHello(printHello);
 
-    setTimeout(() => {
-        clearInterval(cb);
-        console.log('Hello');
-    }, 5000);
-}
-
-function printHello() {
-    console.log('Hello');
-}
-
-repeatHello(printHello);
+  //I think the arrow function make the code easier to write and read.
+  
